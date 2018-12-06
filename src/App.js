@@ -8,7 +8,9 @@ import Todo from "/components/Todo";
 const App = () => {
   return (
     <div>
-      <Todo />
+      <NavBar />
+      <MainContent />
+      <Footer />
     </div>
   );
 };

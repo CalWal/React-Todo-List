@@ -22,24 +22,18 @@ const textStyles = {
   fontSize: 20
 };
 
-function TodoItem() {
+function TodoItem(props) {
   return (
     <div>
       <div style={todoitem}>
-        <input type="checkbox" style={checkboxStyles} />
-        <p style={textStyles}>Placeholder text</p>
-      </div>
-      <div style={todoitem}>
-        <input type="checkbox" style={checkboxStyles} />
-        <p style={textStyles}>Placeholder text</p>
-      </div>
-      <div style={todoitem}>
-        <input type="checkbox" style={checkboxStyles} />
-        <p style={textStyles}>Placeholder text</p>
-      </div>
-      <div style={todoitem}>
-        <input type="checkbox" style={checkboxStyles} />
-        <p style={textStyles}>Placeholder text</p>
+        <input
+          checked={props.completed}
+          type="checkbox"
+          style={checkboxStyles}
+        />
+        <p id={props.id} style={textStyles}>
+          {props.text}
+        </p>
       </div>
     </div>
   );

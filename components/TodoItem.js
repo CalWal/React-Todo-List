@@ -30,6 +30,7 @@ function TodoItem(props) {
           checked={props.completed}
           type="checkbox"
           style={checkboxStyles}
+          onChange={() => console.log("Changed!")}
         />
         <p id={props.id} style={textStyles}>
           {props.text}

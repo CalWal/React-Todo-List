@@ -27,10 +27,10 @@ function TodoItem(props) {
     <div>
       <div style={todoitem}>
         <input
-          checked={props.completed}
+          checked={props.todo.completed}
           type="checkbox"
           style={checkboxStyles}
-          onChange={() => console.log("Changed!")}
+          onChange={event => props.handleChange(props.todo.id)}
         />
         <p id={props.id} style={textStyles}>
           {props.text}

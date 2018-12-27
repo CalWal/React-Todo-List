@@ -1,10 +1,6 @@
 import React from "react";
-
-import NavBar from "/components/NavBar";
-import MainContent from "/components/MainContent";
-import Footer from "/components/Footer";
 import TodoItem from "/components/TodoItem";
-import TodoData from "./TodoData.js";
+import TodoData from "/data/TodoData.js";
 
 class App extends React.Component {
   constructor() {

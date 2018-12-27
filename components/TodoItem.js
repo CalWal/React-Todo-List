@@ -23,6 +23,13 @@ const textStyles = {
 };
 
 function TodoItem(props) {
+  const completedSytle = {
+    fontStyle: "italic",
+    color: "light grey",
+    textDecoration: "line-through",
+    fontFamily: "Helvetica Neue",
+    fontSize: 20
+  };
   return (
     <div>
       <div style={todoitem}>
@@ -32,7 +39,10 @@ function TodoItem(props) {
           style={checkboxStyles}
           onChange={event => props.handleChange(props.todo.id)}
         />
-        <p id={props.id} style={textStyles}>
+        <p
+          id={props.id}
+          style={props.todo.completed ? completedSytle : textStyles}
+        >
           {props.text}
         </p>
       </div>
